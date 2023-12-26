@@ -9,7 +9,7 @@ public class SieveOfEratosthenes {// finding all prime no's from 1 to N
         List<Integer> list = new ArrayList<>();
         int n = (int)Math.sqrt(arr.length); // as we will take limit to sqrt(n) because all the primes no's after sqrt(n) don't require to mark their composites
         // as they have been already marked by the previous primes
-        for(int i=2;i<n;i++){
+        for(int i=2;i<=n;i++){
             if(composites[i] == false){
                 // mark all the factors of i to true so that all it's composites will become true and false will be all the primes
                 for(int j=i*i;j<arr.length;j+=i){ // here j+=i is also because we need mark all the factors to true(composites they are)
