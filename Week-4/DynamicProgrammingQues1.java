@@ -26,7 +26,7 @@ public class DynamicProgrammingQues1 { // dp is basically recursion + memoizatio
     // }
 
     // below is bottom-top dp approach
-    int countWays(int n) {
+    int countWays(int n) { // with O(N) space
         if(n < 0) return 0;
         if(n == 0) return 1;
         int[] dp = new int[n + 1];
@@ -36,5 +36,18 @@ public class DynamicProgrammingQues1 { // dp is basically recursion + memoizatio
             dp[i] = (dp[i-1]+dp[i-2]) % MOD;
         }
         return dp[n];
+    }
+
+    int countWays1(int n) { // another way of doing bottom-top dp approach with O(1) space
+        int f = 1;
+        int s = 2;
+        int curr = 0;
+        if(n == 1) return f;
+        for(int i=3;i<=n;i++){
+            curr = (f+s)%MOD;
+            f = s;
+            s = curr;
+        }
+        return s;
     }
 }
