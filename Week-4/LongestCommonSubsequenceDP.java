@@ -1,7 +1,7 @@
 //https://leetcode.com/problems/longest-common-subsequence/
 public class LongestCommonSubsequenceDP {
     public int longestCommonSubsequence(String text1, String text2) { // bottom-top dp (space optimized)
-        int n = text1.length(); // here space complexity is only O(M)
+        int n = text1.length(); // here space complexity is only O(M)1
         int m = text2.length();
         int[] ans = new int[m+1];
         int[] temp = new int[m+1];
