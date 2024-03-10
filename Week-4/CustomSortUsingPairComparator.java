@@ -1,4 +1,7 @@
+import java.util.Comparator;
+
 //https://leetcode.com/problems/custom-sort-string/
+import java.util.*;
 public class CustomSortUsingPairComparator { // pair is a custom defined data structure
     class Pair{
         char first;
